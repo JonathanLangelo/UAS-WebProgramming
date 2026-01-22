@@ -1,7 +1,5 @@
 # 🎬 CinePlex - Ultimate Movie Trailer Showcase
 
-![CinePlex Header](https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=2025&auto=format&fit=crop)
-
 CinePlex adalah platform showcase trailer film modern yang dibangun dengan **Laravel** dan didesain dengan estetika **Cyberpunk/Futuristic**. Proyek ini bertujuan untuk memberikan pengalaman menjelajahi film yang imersif dan interaktif.
 
 ## ✨ Fitur Utama
