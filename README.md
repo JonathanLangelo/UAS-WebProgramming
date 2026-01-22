@@ -1,59 +1,73 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🎬 CinePlex - Ultimate Movie Trailer Showcase
+
+![CinePlex Header](https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=2025&auto=format&fit=crop)
+
+CinePlex adalah platform showcase trailer film modern yang dibangun dengan **Laravel** dan didesain dengan estetika **Cyberpunk/Futuristic**. Proyek ini bertujuan untuk memberikan pengalaman menjelajahi film yang imersif dan interaktif.
+
+## ✨ Fitur Utama
+
+- **Premium Cinematic UI**: Desain futuristik dengan efek glassmorphism, animasi neon, dan font Orbitron.
+- **Movie Catalog**: Daftar film lengkap dengan kategori Trending dan Genre.
+- **Dynamic Search**: Cari film favorit Anda dengan cepat dan mudah.
+- **Advanced Trailer Modal**: Tonton trailer film langsung dari aplikasi dengan modal yang elegan.
+- **Related Movies**: Rekomendasi film serupa berdasarkan genre.
+- **Mobile Responsive**: Pengalaman yang mulus di perangkat mobile maupun desktop.
+
+## 🚀 Tech Stack
+
+- **Backend**: [Laravel 12](https://laravel.com)
+- **Frontend**: [Tailwind CSS](https://tailwindcss.com), [Vanilla JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- **Database**: [SQLite](https://www.sqlite.org/index.html) (Default)
+- **Icons & Fonts**: [Font Awesome 6](https://fontawesome.com), [Google Fonts (Orbitron & Inter)](https://fonts.google.com)
+- **Build Tool**: [Vite](https://vitejs.dev)
+
+## 🛠️ Instalasi
+
+Ikuti langkah-langkah berikut untuk menjalankan proyek ini di mesin lokal Anda:
+
+1. **Clone repositori**:
+   ```bash
+   git clone [url-repository]
+   cd movie-trailer-showcase
+   ```
+
+2. **Setup Proyek (Otomatis)**:
+   Kami telah menyediakan script setup untuk memudahkan Anda:
+   ```bash
+   composer run setup
+   ```
+   *Script ini akan menginstal dependensi (Composer & NPM), menyalin file `.env`, generate key, melakukan migrasi database, dan menjalankan build frontend.*
+
+3. **Jalankan Server**:
+   ```bash
+   composer run dev
+   ```
+
+### Admin Access
+
+Untuk mengakses halaman admin, gunakan kredensial default berikut:
+- **URL**: `/admin`
+- **Email**: `admin@cineplex.com`
+- **Password**: `password123`
+
+> [!NOTE]  
+> Pastikan Anda telah menjalankan `composer run setup` agar akun admin ini terbuat otomatis di database.
+
+## 📂 Struktur Proyek
+
+- `app/Http/Controllers/MovieController.php`: Logika utama untuk menampilkan film, genre, dan pencarian.
+- `app/Models/Movie.php`: Model database dengan scope filter dan trending.
+- `resources/views/`: File template Blade untuk tampilan UI.
+- `resources/css/app.css`: Konfigurasi styling dan sistem desain.
+- `database/seeders/`: Data awal untuk mengisi katalog film.
+
+## 📝 Catatan Pengembangan
+
+Proyek ini dikembangkan sebagai bagian dari tugas Web Programming UTS/UAS oleh:
+**Jonathan Immanuel Mazar Langelo**
+
+---
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  Dibuat dengan ❤️ untuk pecinta film.
 </p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
